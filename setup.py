@@ -17,7 +17,7 @@ setup(
     extras_require={
         "json5": ["pyjson5"],
         "yaml": ["PyYAML"],
-        "toml": ["toml"],
+        "toml": ["tomli"],
     },
     classifiers=[
         'Development Status :: 3 - Alpha',
