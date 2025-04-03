@@ -11,12 +11,18 @@ The configuration can have syntax similar to the one used by the native `logging
 more features quite easily (see [Extending the configurator](#extending-the-configurator) for more details).
 
 The configurator supports parsing of JSON, JSON5, YAML, and TOML files (out of the box) and can be extended to support
-other formats (again, see [Extending the configurator](#extending-the-configurator) below).
+other formats (again, see [Extending the configurator](#extending-the-configurator) below). Parsing formats other than
+JSON depends on other packages, so you may specify the extras to automatically install packages necessary for parsing
+the formats you select.
 
 ## Installation
 
 ```bash
+# Without extras (only supports JSON if other dependencies are not manually installed)
 pip install loguru-config
+
+# With extras (specify the formats you need other than JSON)
+pip install loguru-config[json5, yaml, toml]
 ```
 
 ## Features
